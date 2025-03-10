@@ -1,5 +1,22 @@
 # Shoply - E-commerce Shopping App
 
+## Table of Contents
+- [Overview](#overview)
+- [Tech Stack](#tech-stack)
+- [Key Features](#key-features)
+- [What I Learned](#what-i-learned)
+  - [Better Organization](#better-organization)
+  - [Team Collaboration](#team-collaboration)
+  - [Easier Maintenance](#easier-maintenance)
+- [Understanding Feature-Based Architecture](#understanding-feature-based-architecture)
+  - [The Grocery Store Analogy](#the-grocery-store-analogy)
+    - [Traditional Structure](#traditional-structure-by-type)
+    - [Feature-Based Structure](#feature-based-structure)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Contributing](#contributing)
+
 ## Overview
 
 Shoply is an innovative e-commerce shopping application designed to provide a seamless shopping experience for users. This application employs a feature-based folder structure, which enhances code organization, collaboration among teams, and maintenance efficiency.
