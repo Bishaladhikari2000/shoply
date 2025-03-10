@@ -1,5 +1,9 @@
 # Shoply - E-commerce Shopping App
 
+<p align="center">
+  <img src="assets/logos/whitelogo.png" alt="Shoply Logo" width="200">
+</p>
+
 ## Table of Contents
 - [Overview](#overview)
 - [Tech Stack](#tech-stack)
