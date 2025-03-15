@@ -1,10 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:shoply/features/personalization/views/onboarding.dart';
 import 'package:shoply/util/constants/text_strings.dart';
 import 'package:shoply/util/theme/theme.dart';
-
-
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -18,11 +16,7 @@ class App extends StatelessWidget {
       darkTheme: ShoplyAppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
       // initialBinding: GeneralBindings(),
-      home: const Scaffold(
-        body: Center(
-          child: Text('Awesome! 🎊 Project Structure is set up and running. \n Happy T Coding 🎊', textAlign: TextAlign.center,),
-        ),
-      ),
+      home: OnBoardingScreen(),
     );
   }
 }

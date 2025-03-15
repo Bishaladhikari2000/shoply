@@ -26,7 +26,7 @@ class ShoplyAppTheme {
     scaffoldBackgroundColor: Colors.black,
     textTheme: TTextTheme.darkTextTheme,
     elevatedButtonTheme: ElevatedButtonThemeData(),
-    outlinedButtonTheme: TOutlinedButtonTheme.darkOutlinedButtonTheme,
-    inputDecorationTheme: TTextFormFieldTheme.darkInputDecorationTheme,
+    outlinedButtonTheme: TOutlinedButtonTheme.lightOutlinedButtonTheme,
+    inputDecorationTheme: TTextFormFieldTheme.lightInputDecorationTheme,
   );
 }
