@@ -15,27 +15,30 @@ class OnBoardingScreen extends StatelessWidget {
           // Horizontal PageView
           PageView(
             children: [
-              Column(
-                children: [
-                  Image(
-                    width: THelperFunctions.screenWidth() * 0.8,
-                    height: THelperFunctions.screenHeight() * 0.6,
-                    image: AssetImage(ShoplyImages.onBoardingImage1),
-                  ),
-                  Text(
-                    TTexts.onBoardingTitle1,
-                    style: Theme.of(context).textTheme.headlineMedium,
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: TSizes.spaceBtwItems),
-                  Text(
-                    TTexts.onBoardingSubTitle1,
-                    style: Theme.of(context).textTheme.headlineMedium,
-                    textAlign: TextAlign.center,
-                  ),
-                  // Title
-                  // Description
-                ],
+              Padding(
+                padding: const EdgeInsets.all(TSizes.defaultSpace),
+                child: Column(
+                  children: [
+                    Image(
+                      width: THelperFunctions.screenWidth() * 0.8,
+                      height: THelperFunctions.screenHeight() * 0.6,
+                      image: AssetImage(ShoplyImages.onBoardingImage1),
+                    ),
+                    Text(
+                      TTexts.onBoardingTitle1,
+                      style: Theme.of(context).textTheme.headlineMedium,
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(height: TSizes.spaceBtwItems),
+                    Text(
+                      TTexts.onBoardingSubTitle1,
+                      style: Theme.of(context).textTheme.headlineSmall,
+                      textAlign: TextAlign.center,
+                    ),
+                    // Title
+                    // Description
+                  ],
+                ),
               ),
             ],
           ),
