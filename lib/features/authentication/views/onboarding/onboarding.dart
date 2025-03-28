@@ -1,24 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:shoply/features/personalization/views/onboarding/widgets/onboarding_page.dart';
-import 'package:shoply/features/personalization/views/onboarding/widgets/onboarding_skip.dart';
-import 'package:shoply/util/constants/colors.dart';
+import 'package:get/get_instance/get_instance.dart';
+import 'package:get/utils.dart';
+import 'package:shoply/features/authentication/controllers/models/onboarding_controller.dart';
+import 'package:shoply/features/authentication/views/onboarding/widgets/onboardingnextbutton.dart';
+import 'package:shoply/features/authentication/views/onboarding/widgets/onbarding_dot_navigation.dart';
+import 'package:shoply/features/authentication/views/onboarding/widgets/onboarding_page.dart';
+import 'package:shoply/features/authentication/views/onboarding/widgets/onboarding_skip.dart';
 import 'package:shoply/util/constants/image_strings.dart';
-import 'package:shoply/util/constants/sizes.dart';
 import 'package:shoply/util/constants/text_strings.dart';
-import 'package:shoply/util/device/device_utility.dart';
-import 'package:shoply/util/helpers/helper_functions.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(OnboardingController());
     return Scaffold(
       body: Stack(
         children: [
           // Horizontal PageView
           PageView(
+            controller: controller.pageController,
+            onPageChanged: controller.updatePageIndicator,
             children: const [
               OnBoardingPage(
                 image: ShoplyImages.onBoardingImage1,
@@ -38,22 +41,11 @@ class OnBoardingScreen extends StatelessWidget {
             ],
           ),
           // skip button
-          OnBoardingSkip(),
+          const OnBoardingSkip(),
           // dot navigation Smooth Page Indicator
-          Positioned(
-            bottom: TDeviceUtils.getBottomNavigationBarHeight() + 25,
-            left: TSizes.defaultSpace,
-
-            child: SmoothPageIndicator(
-              controller: PageController(),
-              count: 3,
-              effect: JumpingDotEffect(
-                activeDotColor: TColors.dark,
-                dotHeight: 6,
-              ),
-            ),
-          ),
+          const OnBoardingDotNavigation(),
           // circle next button
+          OnBoardingNextButton(),
         ],
       ),
     );

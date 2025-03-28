@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:shoply/features/personalization/views/onboarding/onboarding.dart';
+import 'package:shoply/features/authentication/views/onboarding/onboarding.dart';
 import 'package:shoply/util/constants/text_strings.dart';
 import 'package:shoply/util/theme/theme.dart';
 
