@@ -68,4 +68,7 @@ class TTexts {
   // -- Home
   static const String homeAppbarTitle = "Good day for shopping";
   static const String homeAppbarSubTitle = "Shoply For You";
+
+  // ignore: prefer_typing_uninitialized_variables
+  static var orLoginWith;
 }

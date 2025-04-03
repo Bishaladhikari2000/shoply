@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shoply/util/constants/sizes.dart';
-
 import '../../constants/colors.dart';
 
-class TAppBarTheme {
+class TAppBarTheme{
   TAppBarTheme._();
 
   static const lightAppBarTheme = AppBarTheme(
@@ -14,11 +13,7 @@ class TAppBarTheme {
     surfaceTintColor: Colors.transparent,
     iconTheme: IconThemeData(color: TColors.black, size: TSizes.iconMd),
     actionsIconTheme: IconThemeData(color: TColors.black, size: TSizes.iconMd),
-    titleTextStyle: TextStyle(
-      fontSize: 18.0,
-      fontWeight: FontWeight.w600,
-      color: TColors.black,
-    ),
+    titleTextStyle: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w600, color: TColors.black),
   );
   static const darkAppBarTheme = AppBarTheme(
     elevation: 0,
@@ -28,10 +23,6 @@ class TAppBarTheme {
     surfaceTintColor: Colors.transparent,
     iconTheme: IconThemeData(color: TColors.black, size: TSizes.iconMd),
     actionsIconTheme: IconThemeData(color: TColors.white, size: TSizes.iconMd),
-    titleTextStyle: TextStyle(
-      fontSize: 18.0,
-      fontWeight: FontWeight.w600,
-      color: TColors.white,
-    ),
+    titleTextStyle: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w600, color: TColors.white),
   );
 }

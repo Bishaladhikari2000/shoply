@@ -15,7 +15,6 @@ class App extends StatelessWidget {
       theme: ShoplyAppTheme.lightTheme,
       darkTheme: ShoplyAppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
-      // initialBinding: GeneralBindings(),
       home: OnBoardingScreen(),
     );
   }
