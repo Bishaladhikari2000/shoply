@@ -30,7 +30,7 @@ class ResetPassword extends StatelessWidget {
               // IMAGE
               Image(
                 image: AssetImage(ShoplyImages.deliveredEmailIllustration),
-                width: THelperFunctions.screenWidth() * 0.6,
+                width: HelperFunctions.screenWidth() * 0.6,
               ),
               SizedBox(height: TSizes.spaceBtwSections),
               //TITLE & SUBTITLE

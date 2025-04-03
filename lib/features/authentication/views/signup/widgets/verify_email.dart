@@ -58,7 +58,7 @@ class VerifyEmailScreen extends StatelessWidget {
               // IMAGE
               Image(
                 image: AssetImage(ShoplyImages.deliveredEmailIllustration),
-                width: THelperFunctions.screenWidth() * 0.6,
+                width: HelperFunctions.screenWidth() * 0.6,
                 // This function is used to get the screen width
                 // and multiply it by 0.6 to set the width of the image
                 // This is a good practice to make the image responsive
