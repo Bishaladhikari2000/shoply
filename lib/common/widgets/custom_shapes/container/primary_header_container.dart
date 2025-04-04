@@ -41,6 +41,8 @@ class PrimaryHeaderContainer extends StatelessWidget {
                   backgroundColor: TColors.textWhite.withOpacity(0.2),
                 ),
               ),
+              // Add the child widget (AppBar) on top of the decorative elements
+              child,
             ],
           ),
         ),
