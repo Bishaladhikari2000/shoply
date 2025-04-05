@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shoply/common/styles/appbar/appbar.dart';
-import 'package:shoply/common/styles/products/cart_counter_icon.dart';
+import 'package:shoply/common/widgets/appbar/appbar.dart';
+import 'package:shoply/common/widgets/products/cart_counter_icon.dart';
 import 'package:shoply/util/constants/colors.dart';
 import 'package:shoply/util/constants/text_strings.dart';
 

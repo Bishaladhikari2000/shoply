@@ -27,6 +27,7 @@ dependencies:
   get_storage: ^2.1.1
   iconsax: ^0.0.8
   hugeicons: ^0.0.10
+  carousel_slider: ^5.0.0
 
 dev_dependencies:
   flutter_test:
@@ -48,6 +49,7 @@ flutter:
     - assets/images/animations/
     - assets/icons/payment_methods/
     - assets/images/on_boarding_images/
+    - assets/images/promobanner/
 
   fonts:
     - family: Poppins

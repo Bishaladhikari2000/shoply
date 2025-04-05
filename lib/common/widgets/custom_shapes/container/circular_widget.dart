@@ -1,38 +1,40 @@
-// ignore_for_file: deprecated_member_use
-
 import 'package:flutter/material.dart';
 import 'package:shoply/util/constants/colors.dart';
 
 class CircularWidget extends StatelessWidget {
   const CircularWidget({
     super.key,
+    this.width,
+    this.height,
+    this.radius,
+    this.padding,
     this.child,
-    this.width = 400,
-    this.height = 400,
-    this.radius = 400,
-    this.padding = 0,
     this.backgroundColor = TColors.white,
+    this.margin,
   });
 
   final double? width;
   final double? height;
   final double? radius;
   final double? padding;
+  final EdgeInsets? margin;
   final Widget? child;
   final Color backgroundColor;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 400,
-      height: 400,
-      padding: const EdgeInsets.all(0),
+      width: width,
+      height: height,
+      margin: margin,
+      padding: padding != null ? EdgeInsets.all(padding!) : null,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(400),
-
-        color: TColors.textWhite.withOpacity(0.1),
+        borderRadius: BorderRadius.circular(
+          radius ?? (width != null ? width! / 2 : 0),
+        ),
+        color: backgroundColor,
       ),
-      child: Stack(),
+      child: child,
     );
   }
 }
