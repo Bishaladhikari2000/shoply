@@ -3,7 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:shoply/features/shop/view/home.dart';
+import 'package:shoply/features/shop/view/home/home.dart';
+import 'package:shoply/features/shop/view/store/store.dart';
 import 'package:shoply/util/constants/colors.dart';
 import 'package:shoply/util/helpers/helper_functions.dart';
 
@@ -53,7 +54,7 @@ class NavigationBarController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
   final screens = [
     const HomeScreen(),
-    Container(color: Colors.green),
+    const StoreScreen(),
     Container(color: Colors.blue),
     Container(color: Colors.yellow),
   ];

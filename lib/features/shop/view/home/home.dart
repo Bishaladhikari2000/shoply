@@ -2,21 +2,24 @@
 
 import 'package:flutter/material.dart';
 
+// Custom widgets
 import 'package:shoply/common/widgets/custom_shapes/container/primary_header_container.dart';
 import 'package:shoply/common/widgets/custom_shapes/container/search_container.dart';
 import 'package:shoply/common/widgets/layouts/grid_layouts.dart';
-
 import 'package:shoply/common/widgets/products/product_card_vertical.dart';
-
 import 'package:shoply/common/widgets/texts/section_heading.dart';
-import 'package:shoply/features/shop/view/widgets/home_app_bar.dart';
-import 'package:shoply/features/shop/view/widgets/home_categories.dart';
-import 'package:shoply/features/shop/view/widgets/promo_slider.dart';
 
+// Home screen specific widgets
+import 'package:shoply/features/shop/view/home/widgets/home_app_bar.dart';
+import 'package:shoply/features/shop/view/home/widgets/home_categories.dart';
+import 'package:shoply/features/shop/view/home/widgets/promo_slider.dart';
+
+// Constants
+import 'package:shoply/util/constants/colors.dart';
 import 'package:shoply/util/constants/image_strings.dart';
-
 import 'package:shoply/util/constants/sizes.dart';
 
+/// Home screen displaying featured categories, promotional banners, and popular products.
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -26,39 +29,41 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            // --- HEADER SECTION (Blue Gradient Background) ---
             PrimaryHeaderContainer(
               child: Column(
                 children: [
+                  // AppBar with user profile and cart icon
                   const ShoplyHomeAppBar(),
                   const SizedBox(height: TSizes.spaceBtwSections),
+
+                  // Search bar
                   const ShoplySearchContainer(
                     text: 'Find your perfect product',
                   ),
                   const SizedBox(height: TSizes.spaceBtwSections),
 
-                  // HEADING WITH PROPER PADDING
-                  Padding(
-                    padding: const EdgeInsets.only(left: TSizes.defaultSpace),
-                    child: ShoplySectionHeading(
-                      showActionButton: false,
-                      title: 'Popular Categories',
-                      textColor: Colors.white,
-                    ),
+                  // Popular Categories heading
+                  ShoplySectionHeading(
+                    title: 'Popular Categories',
+                    onPressed: () {}, // TODO: Navigate to all categories
+                    showActionButton: false, // Hide "View All" button
                   ),
                   const SizedBox(height: TSizes.spaceBtwSections),
 
-                  // CATEGORIES LIST (EDGE-TO-EDGE)
+                  // Horizontal scrolling categories list
                   const HomeCategories(),
                   const SizedBox(height: TSizes.spaceBtwSections),
                 ],
               ),
             ),
 
-            /// BODY
+            // --- MAIN CONTENT SECTION (White Background) ---
             Padding(
               padding: const EdgeInsets.all(TSizes.defaultSpace),
               child: Column(
                 children: [
+                  // Promotional banner carousel
                   PromoSlider(
                     banners: [
                       ShoplyImages.promoBanner1,
@@ -71,9 +76,22 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: TSizes.spaceBtwSections),
 
-                  // popular products
+                  // Popular Products section
+                  ShoplySectionHeading(
+                    title: 'Popular Products',
+                    onPressed: () {}, // TODO: Navigate to all products
+                    showActionButton: true, // Show "View All" button
+                    textColor:
+                        Theme.of(context).textTheme.titleLarge?.color ??
+                        (Theme.of(context).brightness == Brightness.dark
+                            ? TColors.white
+                            : TColors.primary),
+                    padding: EdgeInsets.zero,
+                  ),
+
+                  // Product grid (2 columns by default)
                   GridLayout(
-                    itemCount: 8,
+                    itemCount: 8, // Number of product cards
                     itemBuilder: (_, index) => const ProductCardVertical(),
                   ),
                 ],

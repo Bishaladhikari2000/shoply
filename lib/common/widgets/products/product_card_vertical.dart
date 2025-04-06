@@ -5,8 +5,10 @@ import 'package:shoply/common/widgets/icons/circular_icon.dart';
 import 'package:shoply/common/widgets/images/rounded_container.dart';
 import 'package:shoply/common/widgets/images/rounded_image.dart';
 import 'package:shoply/common/widgets/products/product_price_text.dart';
+import 'package:shoply/common/widgets/texts/brand_text_with_verified_icon.dart';
 import 'package:shoply/common/widgets/texts/product_title_text.dart';
 import 'package:shoply/util/constants/colors.dart';
+import 'package:shoply/util/constants/enums.dart';
 import 'package:shoply/util/constants/image_strings.dart';
 import 'package:shoply/util/constants/sizes.dart';
 import 'package:shoply/util/helpers/helper_functions.dart';
@@ -87,52 +89,42 @@ class ProductCardVertical extends StatelessWidget {
                   const SizedBox(height: TSizes.spaceBtwItems / 2),
 
                   // brand tag
-                  Row(
-                    children: [
-                      Text(
-                        'Brand: ',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      const SizedBox(width: TSizes.xs),
-                      Icon(
-                        Iconsax.verify5,
-                        color: Color(0xFF25A5DC),
-                        size: TSizes.iconXs,
-                      ),
-                    ],
-                  ),
-                  // Creates a flexible space to insert into a Flexible widget.
-                  // Spacer(),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      // PRICE
-                      ProductPriceText(price: '200',),
-                      Container(
-                        decoration: BoxDecoration(
-                          color: TColors.dark,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(TSizes.cardRadiusMd),
-                            bottomRight: Radius.circular(
-                              TSizes.productImageRadius,
-                            ),
-                          ),
-                        ),
-                        child: const SizedBox(
-                          width: TSizes.iconLg * 1.2,
-                          height: TSizes.iconLg * 1.2,
-
-                          child: Center(
-                            child: Icon(Iconsax.add, color: TColors.white),
-                          ),
-                        ),
-                      ),
-                    ],
+                  BrandTextWithVerifiedIcon(
+                    title: 'Nike',
+                    brandTextSizes: TextSizes.medium,
                   ),
                 ],
               ),
+            ),
+            // Creates a flexible space to insert into a Flexible widget.
+            // Spacer(),
+            Spacer(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                // PRICE
+                Padding(
+                  padding: EdgeInsets.only(left: TSizes.sm),
+                  child: ProductPriceText(price: '200'),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: TColors.dark,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(TSizes.cardRadiusMd),
+                      bottomRight: Radius.circular(TSizes.productImageRadius),
+                    ),
+                  ),
+                  child: const SizedBox(
+                    width: TSizes.iconLg * 1.2,
+                    height: TSizes.iconLg * 1.2,
+
+                    child: Center(
+                      child: Icon(Iconsax.add, color: TColors.white),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
@@ -140,5 +132,3 @@ class ProductCardVertical extends StatelessWidget {
     );
   }
 }
-
-
