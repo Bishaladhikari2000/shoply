@@ -42,6 +42,7 @@ class PrimaryHeaderContainer extends StatelessWidget {
                 width: 250,
               ),
             ),
+            child,
           ],
         ),
       ),

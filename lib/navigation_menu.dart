@@ -3,8 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:shoply/features/shop/view/home/home.dart';
-import 'package:shoply/features/shop/view/store/store.dart';
+import 'package:shoply/features/shop/view/Profile/view/profile_screen.dart';
+import 'package:shoply/features/shop/view/home/views/home.dart';
+import 'package:shoply/features/shop/view/store/views/store.dart';
+import 'package:shoply/features/shop/view/wishlist/views/wishlist.dart';
 import 'package:shoply/util/constants/colors.dart';
 import 'package:shoply/util/helpers/helper_functions.dart';
 
@@ -33,14 +35,14 @@ class NavigationMenu extends StatelessWidget {
           // giving the bottom navigation bar a color of scaffold background color
           destinations: [
             NavigationDestination(icon: Icon(Iconsax.home_2), label: 'Home'),
-            NavigationDestination(icon: Icon(Iconsax.shop), label: 'store'),
+            NavigationDestination(icon: Icon(Iconsax.shop), label: 'Store'),
             NavigationDestination(
               icon: Icon(Iconsax.heart_add),
-              label: 'wishlist',
+              label: 'Wishlist',
             ),
             NavigationDestination(
               icon: Icon(Iconsax.frame_1),
-              label: 'profile',
+              label: 'Profile',
             ),
           ],
         ),
@@ -55,7 +57,7 @@ class NavigationBarController extends GetxController {
   final screens = [
     const HomeScreen(),
     const StoreScreen(),
-    Container(color: Colors.blue),
-    Container(color: Colors.yellow),
+    const WishlistScreen(),
+    const ProfileScreen(),
   ];
 }

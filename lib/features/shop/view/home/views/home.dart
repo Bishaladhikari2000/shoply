@@ -10,9 +10,9 @@ import 'package:shoply/common/widgets/products/product_card_vertical.dart';
 import 'package:shoply/common/widgets/texts/section_heading.dart';
 
 // Home screen specific widgets
-import 'package:shoply/features/shop/view/home/widgets/home_app_bar.dart';
-import 'package:shoply/features/shop/view/home/widgets/home_categories.dart';
-import 'package:shoply/features/shop/view/home/widgets/promo_slider.dart';
+import 'package:shoply/features/shop/view/home/views/widgets/home_app_bar.dart';
+import 'package:shoply/features/shop/view/home/views/widgets/home_categories.dart';
+import 'package:shoply/features/shop/view/home/views/widgets/promo_slider.dart';
 
 // Constants
 import 'package:shoply/util/constants/colors.dart';
