@@ -74,12 +74,6 @@ class StoreScreen extends StatelessWidget {
                       // --- Featured Brands Section ---
                       ShoplySectionHeading(
                         title: "Popular Brands",
-                        style: Theme.of(context).textTheme.headlineMedium,
-                        showActionButton: true, // "View All" button.
-                        padding: EdgeInsets.zero,
-                        textColor:
-                            Theme.of(context).textTheme.titleLarge?.color ??
-                            (dark ? TColors.white : TColors.primary),
                         onPressed: () {}, // TODO: Navigate to all brands.
                       ),
 

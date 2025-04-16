@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shoply/util/constants/colors.dart';
-import 'package:shoply/util/constants/sizes.dart';
+
+import 'package:shoply/util/helpers/helper_functions.dart';
 
 class ShoplySectionHeading extends StatelessWidget {
   const ShoplySectionHeading({
@@ -9,36 +10,43 @@ class ShoplySectionHeading extends StatelessWidget {
     required this.title,
     this.buttonTitle = 'View All',
     this.onPressed,
-    this.textColor = TColors.white,
-    this.padding = const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
-    TextStyle? style, // Add this parameter
+    this.textColor, // Make it optional since we'll determine it from theme
+    this.padding = EdgeInsets.zero,
+    this.style,
   });
 
   final Color? textColor;
   final bool showActionButton;
-  final String title, buttonTitle;
+  final String title;
+  final String buttonTitle;
+  final TextStyle? style;
   final void Function()? onPressed;
-  final EdgeInsets padding; // Add this
+  final EdgeInsets padding;
 
   @override
   Widget build(BuildContext context) {
+    // Determine the text color based on theme if not explicitly provided
+    final effectiveTextColor =
+        textColor ??
+        Theme.of(context).textTheme.titleSmall?.color ??
+        (HelperFunctions.isDarkMode(context) ? TColors.white : TColors.primary);
+
     return Padding(
-      padding: padding, // Use the padding parameter here
+      padding: padding,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
             title,
-            style: Theme.of(
-              context,
-            ).textTheme.headlineSmall?.apply(color: textColor),
+            style: (style ?? Theme.of(context).textTheme.headlineSmall)
+                ?.copyWith(color: style?.color ?? effectiveTextColor),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
           ),
           if (showActionButton)
             TextButton(
               onPressed: onPressed,
-              style: TextButton.styleFrom(foregroundColor: textColor),
+              style: TextButton.styleFrom(foregroundColor: effectiveTextColor),
               child: Text(buttonTitle),
             ),
         ],

@@ -3,8 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:shoply/util/constants/colors.dart';
 import 'package:shoply/util/constants/sizes.dart';
 import 'package:shoply/util/device/device_utility.dart';
+import 'package:shoply/util/helpers/helper_functions.dart';
 
 class ShoplyAppBar extends StatelessWidget implements PreferredSizeWidget {
   const ShoplyAppBar({
@@ -39,7 +41,14 @@ class ShoplyAppBar extends StatelessWidget implements PreferredSizeWidget {
                       Get.back(); // Default action to go back
                     }
                   },
-                  icon: const Icon(Iconsax.arrow_left),
+                  icon: Icon(
+                    Iconsax.arrow_left,
+                    color:
+                        HelperFunctions.isDarkMode(context)
+                            ? TColors
+                                .white // Light color for dark mode
+                            : TColors.dark,
+                  ),
                 )
                 : leadingIcon != null
                 ? IconButton(

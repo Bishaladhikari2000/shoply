@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shoply/common/styles/shadows.dart';
 import 'package:shoply/common/widgets/icons/circular_icon.dart';
@@ -7,6 +9,7 @@ import 'package:shoply/common/widgets/images/rounded_image.dart';
 import 'package:shoply/common/widgets/products/product_price_text.dart';
 import 'package:shoply/common/widgets/texts/brand_text_with_verified_icon.dart';
 import 'package:shoply/common/widgets/texts/product_title_text.dart';
+import 'package:shoply/features/shop/view/product_details/product_details.dart';
 import 'package:shoply/util/constants/colors.dart';
 import 'package:shoply/util/constants/enums.dart';
 import 'package:shoply/util/constants/image_strings.dart';
@@ -20,6 +23,7 @@ class ProductCardVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = HelperFunctions.isDarkMode(context);
     return GestureDetector(
+      onTap: () => Get.to(() => const ProductDetails()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),

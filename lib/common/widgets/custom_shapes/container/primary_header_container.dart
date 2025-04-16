@@ -18,9 +18,6 @@ class PrimaryHeaderContainer extends StatelessWidget {
         padding: EdgeInsets.all(0),
         child: Stack(
           children: [
-            // Child first so circles appear on top
-            child,
-
             // Circles with adjusted positions and opacity
             Positioned(
               top: -50, // Adjusted to be less negative

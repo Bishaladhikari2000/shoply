@@ -46,6 +46,11 @@ class HomeScreen extends StatelessWidget {
                   // Popular Categories heading
                   ShoplySectionHeading(
                     title: 'Popular Categories',
+                    textColor: TColors.white,
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 2,
+                      horizontal: 22,
+                    ),
                     onPressed: () {}, // TODO: Navigate to all categories
                     showActionButton: false, // Hide "View All" button
                   ),
@@ -81,12 +86,6 @@ class HomeScreen extends StatelessWidget {
                     title: 'Popular Products',
                     onPressed: () {}, // TODO: Navigate to all products
                     showActionButton: true, // Show "View All" button
-                    textColor:
-                        Theme.of(context).textTheme.titleLarge?.color ??
-                        (Theme.of(context).brightness == Brightness.dark
-                            ? TColors.white
-                            : TColors.primary),
-                    padding: EdgeInsets.zero,
                   ),
 
                   // Product grid (2 columns by default)
