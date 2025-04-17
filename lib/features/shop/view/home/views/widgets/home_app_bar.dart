@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 // Custom app bar widget
 import 'package:shoply/common/widgets/appbar/appbar.dart';
 // Cart icon with counter badge
-import 'package:shoply/common/widgets/products/cart_counter_icon.dart';
+import 'package:shoply/common/widgets/products/cart/cart_counter_icon.dart';
 // Color constants
 import 'package:shoply/util/constants/colors.dart';
 // Text constants
@@ -39,7 +39,6 @@ class ShoplyHomeAppBar extends StatelessWidget {
       actions: [
         // Cart icon with counter badge
         CartCounterIcon(
-          onPressed: () {}, // TODO: Implement cart navigation
           iconColor: TColors.white, // White icon color
         ),
       ],

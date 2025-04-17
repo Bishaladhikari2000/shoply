@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:shoply/common/widgets/custom_shapes/container/primary_header_container.dart';
 import 'package:shoply/common/widgets/custom_shapes/container/search_container.dart';
 import 'package:shoply/common/widgets/layouts/grid_layouts.dart';
-import 'package:shoply/common/widgets/products/product_card_vertical.dart';
+import 'package:shoply/common/widgets/products/product%20card/product_card_vertical.dart';
 import 'package:shoply/common/widgets/texts/section_heading.dart';
 
 // Home screen specific widgets

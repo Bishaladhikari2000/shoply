@@ -6,7 +6,7 @@ import 'package:shoply/common/widgets/brand/brand_card.dart';
 import 'package:shoply/common/widgets/custom_shapes/container/search_container.dart';
 
 import 'package:shoply/common/widgets/layouts/grid_layouts.dart';
-import 'package:shoply/common/widgets/products/cart_counter_icon.dart';
+import 'package:shoply/common/widgets/products/cart/cart_counter_icon.dart';
 import 'package:shoply/common/widgets/texts/section_heading.dart';
 import 'package:shoply/features/shop/view/store/widgets/category_tab.dart';
 import 'package:shoply/util/constants/colors.dart';
@@ -35,10 +35,7 @@ class StoreScreen extends StatelessWidget {
           ),
           actions: [
             // Shopping cart icon with counter
-            CartCounterIcon(
-              onPressed: () {}, // TODO: Add navigation to cart screen.
-              iconColor: dark ? TColors.white : TColors.primary,
-            ),
+            CartCounterIcon(iconColor: dark ? TColors.white : TColors.primary),
           ],
         ),
 

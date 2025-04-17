@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:shoply/features/shop/view/cart/cart.dart';
 import 'package:shoply/util/constants/colors.dart';
 
 class CartCounterIcon extends StatelessWidget {
-  const CartCounterIcon({
-    super.key,
-    required this.onPressed,
-    required this.iconColor,
-  });
+  const CartCounterIcon({super.key, required this.iconColor});
 
-  final VoidCallback onPressed;
   final Color iconColor;
 
   @override
@@ -17,8 +14,8 @@ class CartCounterIcon extends StatelessWidget {
     return Stack(
       children: [
         IconButton(
+          onPressed: () => Get.to(() => CartScreen()),
           icon: Icon(Iconsax.shopping_cart4, color: iconColor),
-          onPressed: () {},
         ),
         Positioned(
           right: 0,

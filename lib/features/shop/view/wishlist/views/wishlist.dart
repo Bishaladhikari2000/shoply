@@ -3,7 +3,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:shoply/common/widgets/appbar/appbar.dart';
 import 'package:shoply/common/widgets/icons/circular_icon.dart';
 import 'package:shoply/common/widgets/layouts/grid_layouts.dart';
-import 'package:shoply/common/widgets/products/product_card_vertical.dart';
+import 'package:shoply/common/widgets/products/product%20card/product_card_vertical.dart';
 import 'package:shoply/util/constants/sizes.dart';
 
 class WishlistScreen extends StatelessWidget {

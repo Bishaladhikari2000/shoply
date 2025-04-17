@@ -7,10 +7,12 @@ import 'package:shoply/common/widgets/ListTiles/user_profile_tile.dart';
 import 'package:shoply/common/widgets/appbar/appbar.dart';
 import 'package:shoply/common/widgets/custom_shapes/container/primary_header_container.dart';
 import 'package:shoply/common/widgets/texts/section_heading.dart';
-import 'package:shoply/features/personalization/view/profile/settings/profile_settings.dart';
+import 'package:shoply/features/personalization/view/address/addresses.dart';
+import 'package:shoply/features/personalization/view/settings/profile_settings.dart';
+import 'package:shoply/features/shop/view/cart/cart.dart';
+import 'package:shoply/features/shop/view/order/order.dart';
 import 'package:shoply/util/constants/colors.dart';
 import 'package:shoply/util/constants/sizes.dart';
-
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -58,19 +60,19 @@ class ProfileScreen extends StatelessWidget {
                       icon: Iconsax.safe_home,
                       title: 'My Addresses',
                       subTitle: 'Set shopping delivery address',
-                      onTap: () {},
+                      onTap: () => Get.to(() => UserAddressScreen()),
                     ),
                     SettingsMenuTitle(
                       icon: Iconsax.shopping_cart,
                       title: 'My Cart',
                       subTitle: 'Add, remove products and move to checkout',
-                      onTap: () {},
+                      onTap: () => Get.to(() => CartScreen()),
                     ),
                     SettingsMenuTitle(
                       icon: Iconsax.bag_tick,
                       title: 'My Orders',
                       subTitle: 'In-progress and Completed Orders',
-                      onTap: () {},
+                      onTap: () => Get.to(() => OrderScreen()),
                     ),
                     SettingsMenuTitle(
                       icon: Iconsax.bank,

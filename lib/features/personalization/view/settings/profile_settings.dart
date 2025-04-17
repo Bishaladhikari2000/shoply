@@ -3,7 +3,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:shoply/common/widgets/appbar/appbar.dart';
 import 'package:shoply/common/widgets/images/circular_image.dart';
 import 'package:shoply/common/widgets/texts/section_heading.dart';
-import 'package:shoply/features/personalization/view/profile/widgets/profile_menu.dart';
+import 'package:shoply/features/personalization/view/profile/profile_menu.dart';
 import 'package:shoply/util/constants/colors.dart';
 import 'package:shoply/util/constants/image_strings.dart';
 import 'package:shoply/util/constants/sizes.dart';

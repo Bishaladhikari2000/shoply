@@ -21,7 +21,7 @@ class ProductCardVertical extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = HelperFunctions.isDarkMode(context);
+    final isDark = HelperFunctions.isDarkMode(context);
     return GestureDetector(
       onTap: () => Get.to(() => const ProductDetails()),
       child: Container(
@@ -30,7 +30,7 @@ class ProductCardVertical extends StatelessWidget {
         decoration: BoxDecoration(
           boxShadow: [ShadowStyle.verticalProductShadow],
           borderRadius: BorderRadius.circular(TSizes.productImageRadius),
-          color: dark ? TColors.darkerGrey : TColors.white,
+          color: isDark ? TColors.darkerGrey : TColors.white,
         ),
         child: Column(
           children: [
@@ -38,7 +38,7 @@ class ProductCardVertical extends StatelessWidget {
             RoundedContainer(
               height: 180,
               padding: const EdgeInsets.all(TSizes.md),
-              backgroundColor: dark ? TColors.dark : TColors.light,
+              backgroundColor: isDark ? TColors.dark : TColors.light,
               child: Stack(
                 children: [
                   // THUMBNAIL
@@ -111,6 +111,7 @@ class ProductCardVertical extends StatelessWidget {
                   padding: EdgeInsets.only(left: TSizes.sm),
                   child: ProductPriceText(price: '200'),
                 ),
+                // ADD TO CART
                 Container(
                   decoration: BoxDecoration(
                     color: TColors.dark,

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 // Widget for vertical image with text below it
 import 'package:shoply/common/widgets/image_text_widget/vertical_image_text.dart';
+import 'package:shoply/features/shop/view/sub%20category/sub_category.dart';
 // App image assets
 import 'package:shoply/util/constants/image_strings.dart';
 // App sizing constants
@@ -37,8 +39,8 @@ class HomeCategories extends StatelessWidget {
             image: ShoplyImages.shoeIcon,
             // Static text for demo purposes
             title: 'shoes',
-            // TODO: Implement category tap handler
-            onTap: () {},
+
+            onTap: () => Get.to(() => SubCategoriesScreen()),
           );
         },
       ),
