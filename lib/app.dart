@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:shoply/features/authentication/views/onboarding/onboarding.dart';
+import 'package:loading_indicator/loading_indicator.dart';
+
+import 'package:shoply/util/constants/colors.dart';
 import 'package:shoply/util/theme/theme.dart';
 
 class App extends StatelessWidget {
@@ -13,7 +15,17 @@ class App extends StatelessWidget {
       theme: ShoplyAppTheme.lightTheme,
       darkTheme: ShoplyAppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
-      home: OnBoardingScreen(),
+
+      home: Scaffold(
+        backgroundColor: TColors.primary,
+        body: Center(
+          child: LoadingIndicator(
+            indicatorType: Indicator.orbit,
+            colors: [TColors.white],
+            strokeWidth: 1,
+          ),
+        ),
+      ),
     );
   }
 }

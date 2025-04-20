@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_instance/get_instance.dart';
 import 'package:get/utils.dart';
-import 'package:shoply/features/authentication/controllers/models/onboarding_controller.dart';
+import 'package:shoply/features/authentication/controllers/onboarding/onboarding_controller.dart';
 import 'package:shoply/features/authentication/views/onboarding/widgets/on_boarding_nextbutton.dart';
 import 'package:shoply/features/authentication/views/onboarding/widgets/onbarding_dot_navigation.dart';
 import 'package:shoply/features/authentication/views/onboarding/widgets/onboarding_page.dart';

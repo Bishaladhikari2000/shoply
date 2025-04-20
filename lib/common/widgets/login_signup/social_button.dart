@@ -25,7 +25,8 @@ class SSocialButton extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(height: TSizes.spaceBtwSections),
+        const SizedBox(width: TSizes.spaceBtwItems),
+
         Container(
           decoration: BoxDecoration(
             border: Border.all(color: TColors.grey),

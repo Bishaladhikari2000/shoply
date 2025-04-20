@@ -11,12 +11,11 @@ import 'package:shoply/util/constants/sizes.dart';
 import 'package:shoply/util/constants/text_strings.dart';
 
 class LoginForm extends StatelessWidget {
-  const LoginForm({super.key, required this.dark});
-
-  final bool dark;
+  const LoginForm({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: TSizes.spaceBtwSections),
       child: Form(
@@ -54,10 +53,14 @@ class LoginForm extends StatelessWidget {
                 // FORGOT PASSWORD
                 TextButton(
                   onPressed: () => Get.to(() => const ForgetPassword()),
-                  child: const Text(TTexts.forgetPassword),
+                  child: const Text(
+                    TTexts.forgetPassword,
+                    style: TextStyle(color: TColors.darkerGrey),
+                  ),
                 ),
               ],
             ),
+            const SizedBox(height: TSizes.spaceBtwInputFields),
 
             // LOGIN BUTTON
             Column(
@@ -67,7 +70,7 @@ class LoginForm extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () => Get.to(() => NavigationMenu()),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: dark ? TColors.primary : Colors.black,
+                      backgroundColor: isDark ? TColors.primary : Colors.black,
                       foregroundColor: Colors.white,
                     ),
                     child: const Text(TTexts.signIn),
@@ -80,7 +83,7 @@ class LoginForm extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () => Get.to(() => SignupScreen()),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: dark ? TColors.primary : Colors.black,
+                      backgroundColor: isDark ? TColors.black : TColors.primary,
                       foregroundColor: Colors.white,
                     ),
                     child: const Text(TTexts.createAccount),

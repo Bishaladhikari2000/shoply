@@ -32,7 +32,7 @@ class BrandCard extends StatelessWidget {
                 isNetworkImage: false,
                 image: ShoplyImages.clothIcon,
                 backgroundColor: Colors.transparent,
-                overLayColor: isDark ? TColors.white : TColors.primary,
+                overLayColor: isDark ? TColors.white : TColors.black,
               ),
             ),
 

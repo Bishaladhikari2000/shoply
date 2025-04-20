@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:shoply/common/widgets/appbar/appbar.dart';
 import 'package:shoply/common/widgets/appbar/tabbar.dart';
 import 'package:shoply/common/widgets/brand/brand_card.dart';
@@ -8,6 +9,7 @@ import 'package:shoply/common/widgets/custom_shapes/container/search_container.d
 import 'package:shoply/common/widgets/layouts/grid_layouts.dart';
 import 'package:shoply/common/widgets/products/cart/cart_counter_icon.dart';
 import 'package:shoply/common/widgets/texts/section_heading.dart';
+import 'package:shoply/features/shop/view/brand/all_brands.dart';
 import 'package:shoply/features/shop/view/store/widgets/category_tab.dart';
 import 'package:shoply/util/constants/colors.dart';
 
@@ -35,7 +37,7 @@ class StoreScreen extends StatelessWidget {
           ),
           actions: [
             // Shopping cart icon with counter
-            CartCounterIcon(iconColor: dark ? TColors.white : TColors.primary),
+            CartCounterIcon(iconColor: dark ? TColors.white : TColors.black),
           ],
         ),
 
@@ -71,7 +73,7 @@ class StoreScreen extends StatelessWidget {
                       // --- Featured Brands Section ---
                       ShoplySectionHeading(
                         title: "Popular Brands",
-                        onPressed: () {}, // TODO: Navigate to all brands.
+                        onPressed: () => Get.to(() => const AllBrandsScreen()),
                       ),
 
                       SizedBox(height: TSizes.spaceBtwItems / 2),

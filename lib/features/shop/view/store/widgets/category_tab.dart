@@ -41,7 +41,7 @@ class CategoryTab extends StatelessWidget {
                     Theme.of(context).textTheme.titleLarge?.color ??
                     (HelperFunctions.isDarkMode(context)
                         ? TColors.white
-                        : TColors.primary),
+                        : TColors.black),
                 onPressed: () {}, // TODO: Navigate to all brands.
               ),
               const SizedBox(height: TSizes.spaceBtwItems),

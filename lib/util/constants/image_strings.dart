@@ -4,7 +4,7 @@
 class ShoplyImages {
   // -- App Logos
   static const String darkAppLogo = "assets/logos/blacklogo.png";
-  static const String lightAppLogo = "assets/logos/whitelogo.png";
+  static const String lightAppLogo = "assets/logos/white.png";
 
   // -- Social Logos
   static const String google = "assets/logos/google-icon.png";

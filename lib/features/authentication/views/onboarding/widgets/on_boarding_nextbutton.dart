@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:shoply/features/authentication/controllers/models/onboarding_controller.dart';
+import 'package:shoply/features/authentication/controllers/onboarding/onboarding_controller.dart';
 import 'package:shoply/util/constants/colors.dart';
 import 'package:shoply/util/constants/sizes.dart';
 import 'package:shoply/util/device/device_utility.dart';

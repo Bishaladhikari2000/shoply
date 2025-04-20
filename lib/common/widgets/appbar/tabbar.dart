@@ -19,8 +19,8 @@ class CustomTabBarWidget extends StatelessWidget
       child: TabBar(
         tabs: tabs,
         isScrollable: true,
-        indicatorColor: dark ? TColors.white : TColors.primary,
-        labelColor: dark ? TColors.white : TColors.primary,
+        indicatorColor: dark ? TColors.white : TColors.black,
+        labelColor: dark ? TColors.white : TColors.black,
         unselectedLabelColor: TColors.darkGrey,
       ), // TabBar
     ); // Material

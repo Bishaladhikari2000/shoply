@@ -31,7 +31,7 @@ class LoginScreen extends StatelessWidget {
 
               // --- FORM SECTION ---
               // Contains email/password fields and login button
-              LoginForm(dark: dark),
+              LoginForm(),
             ],
           ),
         ),

@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 // Custom widgets
 import 'package:shoply/common/widgets/custom_shapes/container/primary_header_container.dart';
@@ -8,6 +9,7 @@ import 'package:shoply/common/widgets/custom_shapes/container/search_container.d
 import 'package:shoply/common/widgets/layouts/grid_layouts.dart';
 import 'package:shoply/common/widgets/products/product%20card/product_card_vertical.dart';
 import 'package:shoply/common/widgets/texts/section_heading.dart';
+import 'package:shoply/features/shop/view/all%20products/all_products.dart';
 
 // Home screen specific widgets
 import 'package:shoply/features/shop/view/home/views/widgets/home_app_bar.dart';
@@ -84,7 +86,7 @@ class HomeScreen extends StatelessWidget {
                   // Popular Products section
                   ShoplySectionHeading(
                     title: 'Popular Products',
-                    onPressed: () {}, // TODO: Navigate to all products
+                    onPressed: () => Get.to(() => AllProducts()),
                     showActionButton: true, // Show "View All" button
                   ),
 

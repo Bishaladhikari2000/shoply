@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:shoply/features/authentication/views/login/login.dart';
 
 class OnboardingController extends GetxController {
@@ -23,6 +24,8 @@ class OnboardingController extends GetxController {
   // Update current index and jump to next page
   void nextPage() {
     if (currentIndex.value == 2) {
+      final storage = GetStorage();
+      storage.write('isFirstTime', false);
       // Assuming you have 3 pages (0, 1, 2)
       Get.to(() => LoginScreen());
     } else {

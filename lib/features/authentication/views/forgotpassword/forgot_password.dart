@@ -33,7 +33,6 @@ class ForgetPassword extends StatelessWidget {
             Text(
               TTexts.forgetPasswordTitle,
               style: Theme.of(context).textTheme.headlineMedium,
-              textAlign: TextAlign.center,
             ),
             const SizedBox(height: TSizes.spaceBtwItems),
 
