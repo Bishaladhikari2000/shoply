@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/state_manager.dart';
+import 'package:shoply/features/authentication/controllers/signup/signup_controller.dart';
 import 'package:shoply/util/constants/colors.dart';
 import 'package:shoply/util/constants/sizes.dart';
 import 'package:shoply/util/constants/text_strings.dart';
@@ -9,13 +11,25 @@ class TermsAndConditions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = SignupController.instance;
     final dark = HelperFunctions.isDarkMode(context);
     return Row(
       children: [
         SizedBox(
           width: 4,
           height: 24,
-          child: Checkbox(value: true, onChanged: (value) {}),
+          child: Obx(
+            () => Checkbox(
+              value: controller.privacyPolicy.value,
+              onChanged: (value) {
+                // Update the value based on the new value from the checkbox
+                controller.privacyPolicy.value = value ?? false;
+                // Notify listeners if you're using a state management solution
+                controller
+                    .update(); // Call this if you're using GetX or similar
+              },
+            ),
+          ),
         ),
         const SizedBox(width: TSizes.spaceBtwItems),
         Text.rich(

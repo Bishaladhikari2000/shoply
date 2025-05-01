@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:shoply/data/repositories/authentication_repo/authentication_repository.dart';
 import 'package:shoply/firebase_options.dart';
+import 'package:shoply/util/helpers/network_manager.dart';
 import 'app.dart';
 
 Future<void> main() async {
@@ -23,6 +24,9 @@ Future<void> main() async {
 
   // Initialize Authentication Repository
   Get.put(AuthenticationRepository());
+
+  // Initialize Network Manager
+  Get.put(NetworkManager());
 
   // Remove the splash screen
   FlutterNativeSplash.remove();

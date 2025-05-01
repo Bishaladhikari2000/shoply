@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shoply/features/authentication/controllers/signup/signup_controller.dart';
 import 'package:shoply/features/authentication/views/signup/widgets/terms_and_conditions.dart';
-import 'package:shoply/features/authentication/views/signup/widgets/verify_email.dart';
 import 'package:shoply/util/constants/sizes.dart';
 import 'package:shoply/util/constants/text_strings.dart';
 import 'package:shoply/util/validators/validation.dart';
@@ -87,14 +86,26 @@ class SSignupForm extends StatelessWidget {
           ),
           const SizedBox(height: TSizes.spaceBtwInputFields),
           // password
-          TextFormField(
-            validator: (value) => TValidator.validatePassword(value),
-            controller: controller.password,
-            obscureText: true,
-            decoration: InputDecoration(
-              labelText: TTexts.password,
-              prefixIcon: const Icon(Iconsax.password_check),
-              suffixIcon: const Icon(Iconsax.eye_slash),
+          Obx(
+            () => TextFormField(
+              validator: (value) => TValidator.validatePassword(value),
+              controller: controller.password,
+              obscureText: controller.hidePassword.value,
+              decoration: InputDecoration(
+                labelText: TTexts.password,
+                prefixIcon: const Icon(Iconsax.password_check),
+                suffixIcon: IconButton(
+                  onPressed:
+                      () =>
+                          controller.hidePassword.value =
+                              !controller.hidePassword.value,
+                  icon: Icon(
+                    controller.hidePassword.value
+                        ? Iconsax.eye_slash
+                        : Iconsax.eye,
+                  ),
+                ),
+              ),
             ),
           ),
           const SizedBox(height: TSizes.spaceBtwSections),
